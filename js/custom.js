@@ -7,6 +7,19 @@ $(window).on('load', function(){
 
 $(function(){
 
+    $('.open-search').on('click', function(){
+        $('.search-dropdown').addClass('open');
+        $('.overlay').addClass('open');
+        return false;
+    })
+
+    $('.close-search').on('click', function(){
+        $('.search-dropdown').removeClass('open');
+        $('.overlay').removeClass('open');
+        return false;
+    })
+
+    
 	$('.navbar-bottom__arrow').on('click', function(){
         $(this).parents('.navbar-bottom__item').toggleClass('open');
         return false;
@@ -27,6 +40,7 @@ $(function(){
     $('.overlay').on('click', function(){
         $(this).removeClass('open');
         $('.mobile-menu').removeClass('open');
+        $('.search-dropdown').removeClass('open');
         return false;
     })
 
